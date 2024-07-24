@@ -14,6 +14,7 @@ app.get("/people", async function (req, res) {
   const result = await db.query("SELECT * FROM PEOPLE");
   const people = result.rows;
   res.json(people);
+  console.log(people);
 });
 app.listen("8080", () => {
   console.log("listening to port 8080");
